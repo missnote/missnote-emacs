@@ -46,7 +46,7 @@
 
 (require 'hungry-delete)
 (global-hungry-delete-mode)
-
+(global-auto-revert-mode t)
 (require 'smartparens-config)
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 (smartparens-global-mode t)
@@ -85,7 +85,7 @@
 (setq-default cursor-type 'bar)
 
 (setq make-backup-files nil)
-
+(setq auto-save-default nil)
 
 (require 'org)
 
