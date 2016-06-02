@@ -94,10 +94,4 @@
 
 (global-set-key (kbd "M-s o") 'occur-dwim)
 
-;; Setting Chinese Font
-(dolist (charset '(kana han symbol cjk-misc bopomofo))
-  (set-fontset-font (frame-parameter nil 'font)
-		    charset
-		    (font-spec :family "Microsoft Yahei" :size 14)))
-
 (provide 'init-better-defaults)
