@@ -65,4 +65,15 @@
 
 (setq dired-dwim-target t)
 
+(defun remove-dos-eol ()
+  (interactive)
+  (goto-char (point-min))
+  (while (search-forward "\r" nil t) (replace-match "")))
+
+;; Setting Chinese Font
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+  (set-fontset-font (frame-parameter nil 'font)
+            charset
+            (font-spec :family "Microsoft Yahei" :size 14)))
+
 (provide 'init-better-defaults)
