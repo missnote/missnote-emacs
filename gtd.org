@@ -1,0 +1,10 @@
+* 工作安排
+
+** TODO [#B] 
+
+** TODO [#B] 录制视频 第二季第六天的视频
+
+** TODO [#B] 
+
+** TODO [#B] clean up our emacs configs
+
