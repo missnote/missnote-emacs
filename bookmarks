@@ -4,7 +4,7 @@
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-capture-last-stored"
  (filename . "~/.emacs.d/gtd.org")
- (front-context-string . "** TODO [#B] ÄãºÃ\n")
- (rear-context-string . "cord today log\n\n")
- (position . 140))
+ (front-context-string . "** TODO [#B] hel")
+ (rear-context-string . "* TODO [#B] ä½ å¥½\n\n")
+ (position . 289))
 )

@@ -39,8 +39,6 @@
 
 (global-set-key (kbd "C-=") 'er/expand-region)
 
-(global-set-key (kbd "M-s i") 'counsel-imenu)
-
 (global-set-key (kbd "M-s e") 'iedit-mode)
 
 (with-eval-after-load 'company
