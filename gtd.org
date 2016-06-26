@@ -8,3 +8,10 @@
 
 ** TODO [#B] clean up our emacs configs
 
+** DONE [#B] record today log
+   SCHEDULED: <2016-06-26 周日 20:00>
+   CLOCK: [2016-06-26 周日 19:26]
+   CLOCK: [2016-06-26 周日 19:12]--[2016-06-26 周日 19:25] =>  0:13
+
+** TODO [#B] 你好
+

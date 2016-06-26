@@ -22,6 +22,7 @@
                             js2-refactor
                             expand-region
                             iedit
+			    org-pomodoro
                             )  "Default packages")
 
 (setq package-selected-packages missnote/packages)
@@ -49,10 +50,9 @@
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 (smartparens-global-mode t)
 (sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
-;;(sp-local-pair 'lisp-interaction-mode "'" nil :actions nil)
+
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
-
 
 ;; config js2-mode for js files
 (setq auto-mode-alist
@@ -89,13 +89,8 @@
 
   (setq indent-tabs-mode nil))
 
-(global-set-key (kbd "C-c t i") 'my-toggle-web-indent)
-
 ;;config for js2-refactor
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
-(js2r-add-keybindings-with-prefix "C-c C-m")
-
-(global-set-key (kbd "M-s i") 'counsel-imenu)
 
 (defun js2-imenu-make-index ()
       (interactive)
@@ -116,13 +111,9 @@
 	      (lambda ()
 		(setq imenu-create-index-function 'js2-imenu-make-index)))
 
-(global-set-key (kbd "M-s i") 'counsel-imenu)
-
-(global-set-key (kbd "M-s e") 'iedit-mode)
-
 (require 'popwin)
 (popwin-mode t)
 
-(global-set-key (kbd "C-=") 'er/expand-region)
+(require 'org-pomodoro)
 
 (provide 'init-packages)
