@@ -23,6 +23,9 @@
                             expand-region
                             iedit
 			    org-pomodoro
+			    flycheck
+			    auto-yasnippet
+				;evil
                             )  "Default packages")
 
 (setq package-selected-packages missnote/packages)
@@ -50,6 +53,7 @@
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 (smartparens-global-mode t)
 (sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
+(sp-local-pair 'lisp-interaction-mode "'" nil :actions nil)
 
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
@@ -115,5 +119,13 @@
 (popwin-mode t)
 
 (require 'org-pomodoro)
+
+(add-hook 'js2-mode-hook 'flycheck-mode)
+
+(require 'yasnippet)
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
+
+;(evil-mode 1)
 
 (provide 'init-packages)

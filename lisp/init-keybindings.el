@@ -47,4 +47,6 @@
   (define-key company-active-map (kbd "C-n") #'company-select-next)
   (define-key company-active-map (kbd "C-p") #'company-select-previous))
 
+(global-set-key (kbd "C-w") 'backward-delete-char)
+
 (provide 'init-keybindings)
