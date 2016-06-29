@@ -28,7 +28,9 @@
 			    evil
 			    evil-leader
 			    window-numbering
-			    powerline
+			    evil-surround
+			    evil-nerd-commenter
+			    which-key
                             )  "Default packages")
 
 (setq package-selected-packages missnote/packages)
@@ -150,7 +152,25 @@
 
 (window-numbering-mode 1)
 
-(require 'powerline)
-(powerline-default-theme)
+(require 'evil-surround)
+(global-evil-surround-mode)
 
+(evilnc-default-hotkeys)
+
+(define-key evil-normal-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
+(define-key evil-visual-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
+
+(evilnc-default-hotkeys)
+
+(add-hook 'occur-mode-hook
+	  (lambda()
+	    (evil-add-hjkl-bindings 'occur-mode-map 'emacs
+	      (kbd "/")    'evil-search-forward
+	      (kbd "n")    'evil-search-next
+	      (kbd "N")    'evil-search-previous
+	      (kbd "C-d")  'evil-scroll-down
+	      (kbd "C-u")  'evil-scroll-up)))
+
+(which-key-mode 1)
+(setq which-key-side-window-location 'right)
 (provide 'init-packages)
