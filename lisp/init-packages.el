@@ -1,8 +1,7 @@
 (require 'cl)
 
 (when (>= emacs-major-version 24)
-(setq package-archives '(("gnu"   . "http://elpa.zilongshanren.com/gnu/")
-                         ("melpa" . "http://elpa.zilongshanren.com/melpa/")))
+(setq package-archives '(("melpa" . "http://elpa.zilongshanren.com/melpa/")))
   )
 
 ;;add whatever packages you want here
