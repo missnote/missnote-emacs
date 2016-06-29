@@ -30,6 +30,7 @@
 			    evil-surround
 			    evil-nerd-commenter
 			    which-key
+			    wttrin
                             )  "Default packages")
 
 (setq package-selected-packages missnote/packages)
@@ -172,4 +173,7 @@
 
 (which-key-mode 1)
 (setq which-key-side-window-location 'right)
+
+(setq wttrin-default-cities '("Shenzhen"))
+
 (provide 'init-packages)
