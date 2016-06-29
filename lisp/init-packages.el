@@ -25,7 +25,10 @@
 			    org-pomodoro
 			    flycheck
 			    auto-yasnippet
-				;evil
+			    evil
+			    evil-leader
+			    window-numbering
+			    powerline
                             )  "Default packages")
 
 (setq package-selected-packages missnote/packages)
@@ -34,7 +37,7 @@
   (loop for pkg in missnote/packages
         when (not (package-installed-p pkg)) do (return nil)
         finally (return t)))
-
+ 
 (unless (missnote/packages-installed-p)
   (message "%s" "Refreshing package database...")
   (package-refresh-contents)
@@ -126,6 +129,28 @@
 (yas-reload-all)
 (add-hook 'prog-mode-hook #'yas-minor-mode)
 
-;(evil-mode 1)
+(evil-mode 1)
+
+(setcdr evil-insert-state-map nil)
+(define-key evil-insert-state-map [escape] 'evil-normal-state)
+
+(global-evil-leader-mode)
+
+(evil-leader/set-key
+  "ff" 'find-file
+  "bb" 'switch-to-buffer
+  "0"  'select-window-0
+  "1"  'select-window-1
+  "2"  'select-window-2
+  "3"  'select-window-3
+  "w/" 'split-window-right
+  "w-" 'split-window-below
+  ":"  'counsel-M-x
+  "wm" 'delete-other-windows)
+
+(window-numbering-mode 1)
+
+(require 'powerline)
+(powerline-default-theme)
 
 (provide 'init-packages)
