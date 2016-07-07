@@ -15,7 +15,7 @@
  '(org-pomodoro-long-break-length 40)
  '(package-selected-packages
    (quote
-    (wttrin mwe-log-commands 2048-game which-key evil-nerd-commenter evil-surround powerline window-numbering evil-leader evil web-mode smartparens reveal-in-osx-finder popwin org-pomodoro nodejs-repl monokai-theme js2-refactor iedit hungry-delete expand-region exec-path-from-shell counsel company)))
+    (markdown-preview-mode use-package wttrin mwe-log-commands 2048-game which-key evil-nerd-commenter evil-surround powerline window-numbering evil-leader evil web-mode smartparens reveal-in-osx-finder popwin org-pomodoro nodejs-repl monokai-theme js2-refactor iedit hungry-delete expand-region exec-path-from-shell counsel company)))
  '(popwin:popup-window-position (quote right))
  '(popwin:popup-window-width 80))
 (custom-set-faces

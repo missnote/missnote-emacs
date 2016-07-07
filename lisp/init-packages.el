@@ -32,6 +32,8 @@
 			    evil-nerd-commenter
 			    which-key
 			    wttrin
+			    use-package
+			    markdown-mode
                             )  "Default packages")
 
 (setq package-selected-packages missnote/packages)
@@ -148,7 +150,7 @@
   "3"  'select-window-3
   "w/" 'split-window-right
   "w-" 'split-window-below
-  ":"  'counsel-M-x
+  ";"  'counsel-M-x
   "wm" 'delete-other-windows)
 
 (window-numbering-mode 1)
@@ -176,5 +178,9 @@
 (setq which-key-side-window-location 'right)
 
 (setq wttrin-default-cities '("Shenzhen"))
+
+;(require 'markdown-mode)
+;(setq auto-mode-alist  
+ ;   (cons '("\\.\\(md\\|markdown\\)\\'" . markdown-mode) auto-mode-alist))
 
 (provide 'init-packages)
